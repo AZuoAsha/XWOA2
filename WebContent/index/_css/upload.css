@@ -1,0 +1,257 @@
+.body{
+	overflow:auto;
+	background:url(../../img/gallery/background_1.jpg);
+	background-size:100% 100%;
+	height:1000px;
+	}
+	.container{
+	width: 100%; 
+	margin-right: auto; 
+	margin-left: auto;
+	height:100%;
+	}
+	.div1{
+	position:fixed;
+	top:0;z-index:1;
+    width: 99.5%; 
+	}
+	.a{
+	display: block;
+	height: 50px; 
+	font-family: Microsoft Yahei;
+	line-height: 50px;
+	margin: 0px 0px 0px 0px;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+    font-size: 15px;
+    padding-left:0px;
+	}
+	
+	.ul{
+	margin: auto;
+	padding:0%;
+	border:1px #000;
+	border-radius:8px;
+	}
+	.li{
+	list-style-type: none;
+	float: right;
+	width: 12.28999%;
+	background-color:#099;
+	white-space:nowrap;
+	}
+	.li2{
+		list-style-type: none;
+		float: right;
+		width: 13%;
+		background-color:#099;
+		border-top-right-radius:8px;
+		white-space:nowrap;
+	}
+	.li3{
+		list-style-type: none;
+		float: right;
+		width: 14.12%;
+		background-color:#099;
+		border-top-left-radius:8px;
+		white-space:nowrap;
+	}	
+	.div2{
+	height:121.2%;
+	padding:0;
+	border:none;
+	margin-top:3.8%;
+	margin-right: auto; 
+	margin-bottom:0;
+	margin-left: auto;
+	width:32%;
+	float:left;
+	position:absolute;
+	overflow:visible;
+	}
+	.form{
+	 padding-left:3%;
+	}
+	.span{
+	font-size: 10px; color: red;
+	}
+	.h2{
+	color:darkslategray;
+	padding:4%;
+	}
+	
+	.input2{
+	opacity: 0;
+	margin-left:8%;
+	margin-top:7%;
+	width:170px;
+	height:170px;
+	position:relative;
+	z-index:1;
+	}
+	.input3{
+	 position:relative;
+	 z-index:1;
+	 margin-left:42%;
+	}
+	.span2{
+	margin-left:2%;
+	color: darkslategray;
+	}
+	.div4{
+	 margin-left:4%;
+	 width:90%;
+	 height:6%;
+	 padding-left:2%;
+	 border-radius:8px;
+	 overflow:auto;
+	}
+	.span3{
+	color:grey;
+	border-bottom:1px solid bisque;
+	}
+	.div5{
+	margin-left:4%;
+	width:90%;
+	height:10%;
+	border:1px solid bisque;
+	padding-left:2%;
+	border-radius:8px;
+	overflow:auto;
+	}
+	.span4{
+	color:grey;
+	border-bottom:1px solid bisque;
+	padding:2px;
+	}
+	.a2{
+	 color:darkslategray;
+	 z-index:2;
+	 position:relative;
+	 font-size:22px;
+	}
+	.div6{
+	width:64%;
+	height:121.4%;
+	margin:3.7% auto 0 32%;
+	margin-bottom:0px;
+	border:none;
+	float:left;
+	display:inline;
+	position:absolute;
+	padding-left:2%;
+	padding-right:2%;
+	padding-top:0;
+	overflow:visible;
+	color:darkslategray;
+	}
+	.div7{
+	overflow:auto;
+	}
+	
+	#dt{
+	 color:#CF3;
+	 font-size:20px;
+	 padding-left:-5%;
+	 border-radius:8px;
+	 margin-top:1%;
+	 margin-left:5%;
+	 margin-bottom:2%;
+	}
+	
+	.userhead{
+	color: darkslategray;
+	}
+	.nickname{
+	color: darkslategray;
+	}
+	.nick{
+	color:chocolate;
+	font-size:18px;
+	}
+	.ui-menu:after{
+     content:".";
+     display:block;
+     clear: both;
+     line-height: 0;
+     visibility: hidden;
+     height: 0;
+     z-index:9999;
+    }
+    .ui-menu .ui-menu-item{
+     display: block;
+     width: 14.285%;
+     white-space:nowrap;
+     list-style:none;
+     padding:0px;
+     z-index:9999;
+    }
+   #ui-id-22,
+   #ui-id-21, 
+   #ui-id-20,
+   #ui-id-3,
+   #ui-id-4,
+   #ui-id-6,
+   #ui-id-7, 
+   #ui-id-8,
+   #ui-id-9,
+   #ui-id-11,
+   #ui-id-12,
+   #ui-id-13,
+   #ui-id-14, 
+   #ui-id-16,
+   #ui-id-17, 
+   #ui-id-18{
+   
+   width:95%;
+   padding:10% 5% 10% 0;
+   }
+  
+  
+  .slidePanel a {
+	text-decoration: none;
+	padding: 20px;
+	display: inline-block;
+	background-color: white;
+	border: solid red 10px;
+}
+.slidePanel p {
+	margin-right: 60px;
+	color: black !important;	
+}
+
+div.anythingSlider .anythingWindow {
+	/* remove borders above and below slider */
+	border: none;	
+}
+
+div.anythingSlider .anythingControls {
+	/* reposition controls to top right */
+	position: absolute; 
+	right: 55px;
+	top: 15px;
+}
+
+div.anythingSlider .anythingControls ul a {
+	background: none; /* remove drop shadow	*/
+	border-radius: 0; /*remove rounded corners */
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+}
+
+div.anythingSlider.activeSlider .anythingControls ul a {
+	background-color: black;
+	color: white;	
+	border: 1px solid black;
+}
+
+div.anythingSlider.activeSlider .anythingControls ul a.cur {
+	background-color: red;
+	color: black;	
+	border: 1px solid black;
+}
+div.anythingSlider.activeSlider .anythingControls ul a:hover {
+	background-color: white;	
+	color: black;
+}

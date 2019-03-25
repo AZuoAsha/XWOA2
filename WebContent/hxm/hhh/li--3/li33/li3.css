@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+#pic{
+	width:800px;
+}
+img{
+	float:left;
+	padding:10px 10px 10px 0px;
+	
+}
+

@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	background:url(xcx2.jpg);
+	background-repeat: no-repeat;
+	background-size:cover;
+	/*background-size: 100% 100%;*/
+}
+#all{
+	height:400px;
+	width:900px;
+	margin:auto;
+}
+	
+#top{
+	height:40px;
+	width:900px;
+	margin:0px 0px 10px 0px;
+	background:-webkit-linear-gradient(left,white,blue);
+	border-radius: 8px;
+}
+#bot{
+	height:350px;
+	weight:900px;
+	background:#DFDADA;
+	border-radius: 8px;
+}
+#pic{
+	
+	display:block;
+	float:left;
+	height:350px;
+	width:540px;
+}
+img{
+	height:100%;
+	width:100%;
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+}
+#message{
+	display:block;
+	float:right;
+	height:200px;
+	width:360px;
+	margin:70px 0px;
+}
+

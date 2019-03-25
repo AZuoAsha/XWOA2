@@ -1,0 +1,106 @@
+h2 {
+			background: url(../_images/open.png) no-repeat 0 11px;
+			padding: 10px 0 0 25px;
+			cursor: pointer;
+		}
+		h2.close {
+			background-image: url(../_images/close.png);
+		}
+		.answer {
+			margin-left: 25px;
+		}
+		.tabs {
+			margin: 0;
+			padding: 0;
+			zoom : 1;
+		}
+		.tabs li {
+			float: left;
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		.tabs a {
+			display: block;
+			text-decoration: none;
+			padding: 3px 5px;
+			background-color: rgb(110,138,195);
+			margin-right: 10px;
+			border: 1px solid rgb(153,153,153);
+			margin-bottom: -1px;
+		}
+		.tabs .active {
+			border-bottom: 1px solid white;
+			background-color: white;
+			color: rgb(51,72,115);
+			position: relative;
+		}
+
+		.panelContainer {
+			clear: both;
+			margin-bottom: 25px;
+			border: 1px solid rgb(153,153,153);
+			background-color: white;
+			padding: 10px;
+		}
+
+		.panel h2 {
+			color: rgb(57,78,121);
+			text-shadow: none;
+		}
+		.panel p {
+			color: black;
+		}
+
+
+		#navigation ul, #navigation li {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+		}
+		#navigation a {
+			background-color: rgb(204,204,204);
+			text-decoration: none;
+			font: 16px 'ColaborateLightRegular', Arial, sans-serif;
+			text-indent: 10px;
+			border-top: 1px solid #ccc;
+			border-left:1px solid #ccc;
+			border-right:1px solid #999;
+			border-bottom:1px solid #999;
+			margin: 0px;
+			padding: 0px;
+			color: rgb(53,75,118);
+		}
+		#navigation a:hover {
+			border-top:1px solid #999;
+			border-left:1px solid #999;
+			border-right:1px solid #ccc;
+			border-bottom:1px solid #ccc;
+			background-color: #555;
+			color: white;
+		}
+		#navigation .stack > a {
+			background-image: url(../../images/arrow.png);
+			background-repeat: no-repeat;
+			background-position: 97% 8px;
+		}
+		#navigation .stack > a:hover {
+			background-position: 97% -78px;
+		}
+		#navigation ul .stack > a {
+			background-position: 97% -21px;
+		}
+		#navigation ul .stack > a:hover {
+			background-position: 97% -54px;
+		}
+
+		.aa{
+			float: right;
+			margin:0 2% auto auto;
+			border: 1px solid mediumseagreen;
+			font-family: 'ColaborateBoldRegular', Arial, sans-serif;
+			font-size: 20px;
+			padding: 4px;
+			border-radius: 6px;
+			text-decoration: none;
+		}

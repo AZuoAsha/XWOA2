@@ -1,0 +1,506 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>理工勤学网</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<!-- STYLESHEETS --><!--[if lt IE 9]><script src="js/flot/excanvas.min.js"></script><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script><![endif]-->
+	<link rel="stylesheet" type="text/css" href="css/cloud-admin.css" >
+	
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<!-- DATE RANGE PICKER -->
+	<link rel="stylesheet" type="text/css" href="js/bootstrap-daterangepicker/daterangepicker-bs3.css" />
+	<!-- UNIFORM -->
+	<link rel="stylesheet" type="text/css" href="js/uniform/css/uniform.default.min.css" />
+	<!-- ANIMATE -->
+	<link rel="stylesheet" type="text/css" href="css/animatecss/animate.min.css" />
+	<!-- FONTS -->
+	<link href='http://fonts.useso.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+	
+</head>
+<body class="login">	
+	<!-- PAGE -->
+	<section id="page">
+			<!-- HEADER -->
+			<header>
+				<!-- NAV-BAR -->
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4 col-md-offset-4">
+							<div id="logo">
+								<a href="index.html"><img src="img/logo/logo.png" height="40" alt="logo name" /></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--/NAV-BAR -->
+			</header>
+			<!--/HEADER -->
+			<!-- LOGIN -->
+			<section id="login_bg" class="visible">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4 col-md-offset-4">
+							<div class="login-box">
+								<h2 class="bigintro">欢迎登录</h2>
+								<div class="divide-40"></div>
+								<form role="form" action="login.action" method="post">
+                                <input type="hidden" name="mode" value="login"/>
+								  <div class="form-group">
+									<label for="exampleInputEmail1">邮箱地址</label>
+									<i class="fa fa-envelope"></i>
+									<input type="email" placeholder="请输入邮箱" class="form-control" id="exampleInputEmail1" name="email" required>
+								  </div>
+								  <div class="form-group"> 
+									<label for="exampleInputPassword1">登录密码</label>
+									<i class="fa fa-lock"></i>
+									<input type="password" placeholder="请输入密码" class="form-control" id="exampleInputPassword1" name="password" required >
+								  </div>
+								  <div>
+									<label class="checkbox"> <input type="checkbox" class="uniform" value="" id="saveCookie" checked> 记住密码</label>
+									<button type="submit" class="btn btn-danger" id="submit" onclick="userLogin()">登录</button>
+								  </div>
+								</form>
+								<!-- SOCIAL LOGIN -->
+								<div class="divide-20"></div>
+								<div class="center">
+									<strong>或者使用您的社交账号登录</strong>
+								</div>
+								<div class="divide-20"></div>
+								<div class="social-login center">
+									<a class="btn btn-primary btn-lg">
+										<i class="fa fa-facebook"></i>
+									</a>
+									<a class="btn btn-info btn-lg">
+										<i class="fa fa-twitter"></i>
+									</a>
+									<a class="btn btn-danger btn-lg">
+										<i class="fa fa-google-plus"></i>
+									</a>
+								</div>
+								<!-- /SOCIAL LOGIN -->
+								<div class="login-helpers">
+									<a href="#" onclick="swapScreen('forgot_bg');return false;">忘记密码?</a> <br>
+									还没有账号? <a href="#" onclick="swapScreen('register_bg');return false;">现在注册!</a><br>
+                                        <a href="logOut.html">注销邮箱</a><br>
+                                        <a href="index.jsp">返回首页</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--/LOGIN -->
+			<!-- REGISTER -->
+			<section id="register_bg" class="font-400">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4 col-md-offset-4">
+							<div class="login-box">
+								<h2 class="bigintro">注册账号</h2>
+								<div class="divide-40"></div>
+								<form role="form" action="Register" method="post">
+                                 <input type="hidden" name="mode" value="register"/>
+                                <div class="form-group">
+									<label for="exampleInputUserPhone">电话号码</label>
+									<i class="fa fa-user"></i>
+									<input type="text" placeholder="请输入数字" class="form-control" id="exampleInputUserPhone" name="phoneNumber" required>
+								  </div>
+								  <div class="form-group">
+									<label for="exampleInputQQ">QQ</label>
+									<i class="fa fa-user"></i>
+									<input type="text" placeholder="请输入数字" class="form-control" id="exampleInputQQ" name="qq" required>
+								  </div>
+								  <div class="form-group">
+									<label for="exampleInputWX">微信</label>
+									<i class="fa fa-user"></i>
+									<input type="text" placeholder="请输入微信号" class="form-control" id="exampleInputWX" name="wx" required>
+								  </div>
+								  <div class="form-group">
+									<label for="exampleInputFull">真实姓名</label>
+									<i class="fa fa-font"></i>
+									<input type="text" class="form-control" placeholder="请输入姓名" id="exampleInputFull" name="fullName" required>
+								  </div>
+									<div class="form-group">
+										<label for="exampleInputNtion">国家</label><br>
+										<select name="nation" id="exampleInputNtion" placeholder="请输入所属国家名字" style="width:100%;height: 35px;border-radius: 6px;" required>
+											<option>请选择您的国家 </option>
+											<option value="U.S.A.">U.S.A. </option>
+											<option value="U.S.A. - Espa">U.S.A. - Espa&ntilde;ol </option>
+											<option value="Afghanistan">Afghanistan </option>
+											<option value="Albania">Albania </option>
+											<option value="Algeria ">Algeria </option>
+											<option value="American Samoa">American Samoa </option>
+											<option value="Andorra">Andorra </option>
+											<option value="Angola">Angola </option>
+											<option value="Anguilla">Anguilla </option>
+											<option value="Antigua">Antigua </option>
+											<option value="Argentina">Argentina </option>
+											<option value="Armenia">Armenia </option>
+											<option value="Aruba">Aruba </option>
+											<option value="Australia">Australia </option>
+											<option value="Austria">Austria </option>
+											<option value="Azerbaijan">Azerbaijan </option>
+											<option value="Bahamas">Bahamas </option>
+											<option value="Bahrain">Bahrain </option>
+											<option value="Bangladesh">Bangladesh </option>
+											<option value="Barbados">Barbados </option>
+											<option value="Barbuda">Barbuda </option>
+											<option value="Belarus">Belarus </option>
+											<option value="Belgium">Belgium </option>
+											<option value="Belize">Belize </option>
+											<option value="Benin">Benin </option>
+											<option value="Bermuda">Bermuda </option>
+											<option value="Bhutan">Bhutan </option>
+											<option value="Bolivia">Bolivia </option>
+											<option value="Bonaire">Bonaire </option>
+											<option value="Bosnia-Herzegovina">Bosnia-Herzegovina </option>
+											<option value="Botswana">Botswana </option>
+											<option value="Brazil">Brazil </option>
+											<option value="British Virgin Islands">British Virgin Islands </option>
+											<option value="Brunei">Brunei </option>
+											<option value="Bulgaria">Bulgaria </option>
+											<option value="Burkina Faso">Burkina Faso </option>
+											<option value="Burundi">Burundi </option>
+											<option value="Cambodia">Cambodia </option>
+											<option value="Cameroon">Cameroon </option>
+											<option value="Canada - English">Canada - English </option>
+											<option value="Canada - Francais">Canada - Francais </option>
+											<option value="Cape Verde">Cape Verde </option>
+											<option value="Cayman Islands">Cayman Islands </option>
+											<option value="Central African Republic">Central African Republic </option>
+											<option value="Chad">Chad </option>
+											<option value="Channel Islands">Channel Islands </option>
+											<option value="Chile">Chile </option>
+											<option value="China" checked>China </option>
+											<option value="Colombia">Colombia </option>
+											<option value="Congo - Brazzaville">Congo - Brazzaville </option>
+											<option value="Congo, The Republic of">Congo, The Republic of </option>
+											<option value="Cook Islands">Cook Islands </option>
+											<option value="Costa Rica">Costa Rica </option>
+											<option value="Croatia">Croatia </option>
+											<option value="Curacao">Curacao </option>
+											<option value="Cyprus">Cyprus </option>
+											<option value="Czech Republic">Czech Republic </option>
+											<option value="Denmark">Denmark </option>
+											<option value="Djibouti">Djibouti </option>
+											<option value="Dominica">Dominica </option>
+											<option value="Dominican Republic">Dominican Republic </option>
+											<option value="Ecuador">Ecuador </option>
+											<option value="Egypt">Egypt </option>
+											<option value="El Salvador">El Salvador </option>
+											<option value="Equatorial Guinea">Equatorial Guinea </option>
+											<option value="Eritrea">Eritrea </option>
+											<option value="Estonia">Estonia </option>
+											<option value="Ethiopia">Ethiopia </option>
+											<option value="Faroe Islands">Faroe Islands </option>
+											<option value="Fiji">Fiji </option>
+											<option value="Finland">Finland </option>
+											<option value="France">France </option>
+											<option value="French Guiana">French Guiana </option>
+											<option value="French Polynesia">French Polynesia </option>
+											<option value="Gabon">Gabon </option>
+											<option value="Gambia">Gambia </option>
+											<option value="Georgia">Georgia </option>
+											<option value="Germany">Germany </option>
+											<option value="Ghana">Ghana </option>
+											<option value="Gibraltar">Gibraltar </option>
+											<option value="Greece">Greece </option>
+											<option value="Greenland">Greenland </option>
+											<option value="Grenada">Grenada </option>
+											<option value="Guadeloupe">Guadeloupe </option>
+											<option value="Guam">Guam </option>
+											<option value="Guatemala">Guatemala </option>
+											<option value="Guinea Bissau">Guinea Bissau </option>
+											<option value="Guinea">Guinea </option>
+											<option value="Guyana">Guyana </option>
+											<option value="Haiti">Haiti </option>
+											<option value="Honduras">Honduras </option>
+											<option value="Hong Kong">Hong Kong </option>
+											<option value="Hungary">Hungary </option>
+											<option value="Iceland">Iceland </option>
+											<option value="India">India </option>
+											<option value="Indonesia">Indonesia </option>
+											<option value="Iran">Iran </option>
+											<option value="Iraq">Iraq </option>
+											<option value="Ireland">Ireland </option>
+											<option value="Israel">Israel </option>
+											<option value="Italy">Italy </option>
+											<option value="Ivory Coast">Ivory Coast </option>
+											<option value="Jamaica">Jamaica </option>
+											<option value="Japan">Japan </option>
+											<option value="Jordan">Jordan </option>
+											<option value="Kazakhstan">Kazakhstan </option>
+											<option value="Kenya">Kenya </option>
+											<option value="Kuwait">Kuwait </option>
+											<option value="Kyrgyzstan">Kyrgyzstan </option>
+											<option value="Laos">Laos </option>
+											<option value="Latvia">Latvia </option>
+											<option value="Lebanon">Lebanon </option>
+											<option value="Lesotho">Lesotho </option>
+											<option value="Liberia">Liberia </option>
+											<option value="Libya">Libya </option>
+											<option value="Liechtenstein">Liechtenstein </option>
+											<option value="Lithuania">Lithuania </option>
+											<option value="Luxembourg">Luxembourg </option>
+											<option value="Macau">Macau </option>
+											<option value="Macedonia, The Republic of">Macedonia, The Republic of </option>
+											<option value="Madagascar">Madagascar </option>
+											<option value="Malawi">Malawi </option>
+											<option value="Malaysia">Malaysia </option>
+											<option value="Maldives">Maldives </option>
+											<option value="Mali">Mali </option>
+											<option value="Malta">Malta </option>
+											<option value="Marshall Islands">Marshall Islands </option>
+											<option value="Martinique">Martinique </option>
+											<option value="Mauritania">Mauritania </option>
+											<option value="Mauritius">Mauritius </option>
+											<option value="Mexico">Mexico </option>
+											<option value="Micronesia">Micronesia </option>
+											<option value="Moldova">Moldova </option>
+											<option value="Monaco">Monaco </option>
+											<option value="Mongolia">Mongolia </option>
+											<option value="Montenegro">Montenegro </option>
+											<option value="Montserrat">Montserrat </option>
+											<option value="Morocco">Morocco </option>
+											<option value="Mozambique">Mozambique </option>
+											<option value="Myanmar/Burma">Myanmar/Burma </option>
+											<option value="Namibia">Namibia </option>
+											<option value="Nepal">Nepal </option>
+											<option value="Netherlands Antilles">Netherlands Antilles </option>
+											<option value="Netherlands">Netherlands </option>
+											<option value="New Caledonia">New Caledonia </option>
+											<option value="New Zealand">New Zealand </option>
+											<option value="Nicaragua">Nicaragua </option>
+											<option value="Niger">Niger </option>
+											<option value="Nigeria">Nigeria </option>
+											<option value="Norway">Norway </option>
+											<option value="Oman">Oman </option>
+											<option value="Pakistan">Pakistan </option>
+											<option value="Palau">Palau </option>
+											<option value="Panama">Panama </option>
+											<option value="Papua New Guinea">Papua New Guinea </option>
+											<option value="Paraguay">Paraguay </option>
+											<option value="Peru">Peru </option>
+											<option value="Philippines">Philippines </option>
+											<option value="Poland">Poland </option>
+											<option value="Portugal">Portugal </option>
+											<option value="Puerto Rico">Puerto Rico </option>
+											<option value="Qatar">Qatar </option>
+											<option value="Reunion">Reunion </option>
+											<option value="Romania">Romania </option>
+											<option value="Russia">Russia </option>
+											<option value="Rwanda">Rwanda </option>
+											<option value="Saba">Saba </option>
+											<option value="Saipan">Saipan </option>
+											<option value="San Marino">San Marino </option>
+											<option value="Saudi Arabia">Saudi Arabia </option>
+											<option value="Senegal">Senegal </option>
+											<option value="Serbia">Serbia </option>
+											<option value="Seychelles">Seychelles </option>
+											<option value="Sierra Leone">Sierra Leone </option>
+											<option value="Singapore">Singapore </option>
+											<option value="Slovak Republic">Slovak Republic </option>
+											<option value="Slovenia">Slovenia </option>
+											<option value="Somalia">Somalia </option>
+											<option value="South Africa">South Africa </option>
+											<option value="South Korea">South Korea </option>
+											<option value="Spain">Spain </option>
+											<option value="Sri Lanka">Sri Lanka </option>
+											<option value="St. Barthelemy">St. Barthelemy </option>
+											<option value="St. Croix">St. Croix </option>
+											<option value="St. Eustatius">St. Eustatius </option>
+											<option value="St. Kitts and Nevis">St. Kitts and Nevis </option>
+											<option value="St. Lucia">St. Lucia </option>
+											<option value="St. Maarten/St. Martin">St. Maarten/St. Martin </option>
+											<option value="St. Thomas">St. Thomas </option>
+											<option value="St. Vincent">St. Vincent </option>
+											<option value="Sudan">Sudan </option>
+											<option value="Suriname">Suriname </option>
+											<option value="Swaziland">Swaziland </option>
+											<option value="Sweden">Sweden </option>
+											<option value="Switzerland">Switzerland </option>
+											<option value="Syria">Syria </option>
+											<option value="Taiwan">Taiwan </option>
+											<option value="Tanzania">Tanzania </option>
+											<option value="Thailand">Thailand </option>
+											<option value="Togo">Togo </option>
+											<option value="Tortola">Tortola </option>
+											<option value="Trinidad and Tobago">Trinidad and Tobago </option>
+											<option value="Tunisia">Tunisia </option>
+											<option value="Turkey">Turkey </option>
+											<option value="Turkmenistan">Turkmenistan </option>
+											<option value="Turks and Caicos Islands">Turks and Caicos Islands </option>
+											<option value="U.S. Virgin Islands">U.S. Virgin Islands </option>
+											<option value="Uganda">Uganda </option>
+											<option value="Ukraine">Ukraine </option>
+											<option value="United Arab Emirates">United Arab Emirates </option>
+											<option value="United Kingdom">United Kingdom </option>
+											<option value="Uruguay">Uruguay </option>
+											<option value="U.S.A.">U.S.A. </option>
+											<option value="Uzbekistan">Uzbekistan </option>
+											<option value="Vanuatu">Vanuatu </option>
+											<option value="Vatican City">Vatican City </option>
+											<option value="Venezuela">Venezuela </option>
+											<option value="Vietnam">Vietnam </option>
+											<option value="Wallis Futuna">Wallis &amp; Futuna </option>
+											<option value="Yemen">Yemen </option>
+											<option value="Zambia">Zambia </option>
+											<option value="Zimbabwe">Zimbabwe </option>
+										</select>
+
+									</div>
+								  <div class="form-group">
+									<label for="exampleInputAD">户口所在地</label>
+									<i class="fa fa-font"></i>
+									<input type="text" class="form-control" placeholder="请输入真实地址" id="exampleInputAD" name="address">
+								  </div>
+								  <div class="form-group">
+									<label for="exampleInputSchool">学校</label>
+									<i class="fa fa-font"></i>
+									<input type="text" class="form-control" placeholder="请输入学校名字" id="exampleInputSchool" name="school" required>
+								  </div>
+
+								  <div class="form-group">
+									<label for="exampleInputUsername">用户名</label>
+									<i class="fa fa-user"></i>
+									<input type="text" class="form-control" placeholder="请输入用户名" id="exampleInputUsername" name="loginName" required>
+								  </div>
+								  <div class="form-group">
+									<label for="exampleInputEmail1">邮箱地址</label>
+									<i class="fa fa-envelope"></i>
+									<input type="email" class="form-control" placeholder="请输入有效的邮箱" id="exampleInputEmail1" name="email" required>
+								  </div>
+								  <div class="form-group"> 
+									<label for="exampleInputPassword1">密码</label>
+									<i class="fa fa-lock"></i>
+									<input type="password" class="form-control" placeholder="密码不能有中文" id="exampleInputPassword1" name="password" required>
+								  </div>
+								  <div class="form-group"> 
+									<label for="exampleInputPassword2">重复密码</label>
+									<i class="fa fa-check-square-o"></i>
+									<input type="password" class="form-control" placeholder="密码不能有中文" id="exampleInputPassword2" name="confirmPassword" required>
+								  </div>
+								  <div class="form-group" align="left">
+									    <p style="font-size:18px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;性别：
+									      <label style="padding-left:0px;">
+									        <input name="gender" type="radio" value="男" checked required>
+									        男</label>
+									      <label style="margin-left:22px;">
+									        <input name="gender" type="radio" value="女" required>
+									        女 </label>
+									    </p>
+								   </div>
+								  <div>
+									<input type="checkbox" class="uniform" value="" > 我接受 <a href="serviceClause.html">服务条款</a> 和 <a href="serviceClause.html">隐私政策</a>
+									<button type="submit" class="btn btn-success" id="submitInfo">提交信息</button> 
+								  </div>
+								</form>
+								<!-- SOCIAL REGISTER -->
+								<div class="divide-20"></div>
+								<div class="center">
+									<strong>或者使用社交账号注册</strong>
+								</div>
+								<div class="divide-20"></div>
+								<div class="social-login center">
+									<a class="btn btn-primary btn-lg">
+										<i class="fa fa-facebook"></i>
+									</a>
+									<a class="btn btn-info btn-lg">
+										<i class="fa fa-twitter"></i>
+									</a>
+									<a class="btn btn-danger btn-lg">
+										<i class="fa fa-google-plus"></i>
+									</a>
+								</div>
+								<!-- /SOCIAL REGISTER -->
+								<div class="login-helpers">
+									<a href="#" onclick="swapScreen('login_bg');return false;"> 返回登录</a> <br>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--/REGISTER -->
+			<!-- FORGOT PASSWORD -->
+			<section id="forgot_bg">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4 col-md-offset-4">
+							<div class="login-box">
+								<h2 class="bigintro">找回密码</h2>
+								<div class="divide-40"></div>
+								<form role="form" action="ModifyServlet" method="post">
+                                 <div class="form-group">
+									<label for="exampleInputUsername">电话号码</label>
+									<i class="fa fa-user"></i>
+									<input type="text" placeholder="请输入注册时的号码" class="form-control" id="exampleInputUsername" name="phoneNumber" required>
+								  </div>
+								  <div class="form-group">
+									<label for="exampleInputEmail1">注册过的邮箱</label>
+									<i class="fa fa-envelope"></i>
+									<input type="email" placeholder="请输入注册过的邮箱" class="form-control" id="exampleInputEmail1" name="email" required>
+								  </div>
+                                   <div class="form-group"> 
+									<label for="exampleInputPassword1">新密码</label>
+									<i class="fa fa-lock"></i>
+									<input type="password" placeholder="密码不能有中文" class="form-control" id="exampleInputPassword1" name="password" required>
+								  </div>
+								  <div class="form-group"> 
+									<label for="exampleInputPassword2">重复新密码</label>
+									<i class="fa fa-check-square-o"></i>
+									<input type="password" placeholder="密码不能有中文" class="form-control" id="exampleInputPassword2" name="confirmPassword" required>
+								  </div>
+						
+								  <div>
+									<button type="submit" class="btn btn-info">提交</button>
+								  </div>
+								</form>
+								<div class="login-helpers">
+									<a href="#" onclick="swapScreen('login_bg');return false;">返回登录</a> <br>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- FORGOT PASSWORD -->
+	</section>
+	<!--/PAGE -->
+	<!-- JAVASCRIPTS -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<!-- JQUERY -->
+	<script src="js/jquery/jquery-2.0.3.min.js"></script>
+	<!-- JQUERY UI-->
+	<script src="js/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<script src="bootstrap-dist/js/bootstrap.min.js"></script>
+	
+	
+	<!-- UNIFORM -->
+	<script type="text/javascript" src="js/uniform/jquery.uniform.min.js"></script>
+	<!-- BACKSTRETCH -->
+	<script type="text/javascript" src="js/backstretch/jquery.backstretch.min.js"></script>
+	<!-- CUSTOM SCRIPT -->
+	<script src="js/script.js"></script>
+	<script>
+		jQuery(document).ready(function() {		
+			App.setPage("login_bg");  //Set current page
+			App.init(); //Initialise plugins and elements
+		});
+	</script>
+	<script type="text/javascript">
+		function swapScreen(id) {
+			jQuery('.visible').removeClass('visible animated fadeInUp');
+			jQuery('#'+id).addClass('visible animated fadeInUp');
+		}
+	</script>
+	<!-- /JAVASCRIPTS -->
+    <script type="text/javascript" src="js/cookie.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>
